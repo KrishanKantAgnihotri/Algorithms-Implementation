@@ -4,7 +4,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long
-#define Time cerr<<"\nTime Taken : "<<(float)(clock()-time_p)/CLOCKS_PER_SEC<<"\n";
+#define Time cout<<"\nTime Taken : "<<(float)(clock()-time_p)/CLOCKS_PER_SEC<<"\n";
 clock_t time_p=clock();
 
 void file_io(){
@@ -17,7 +17,7 @@ void file_io(){
 bool test = false;
 bool file = true;
 int divide(int l,int r,vector<int> &v){
-    int dist = (r-l);
+    int dist = (r-l+1);
     srand(time(0));
     int p = l+rand()%dist;
     swap(v[p],v[r]);
@@ -54,6 +54,7 @@ void solve(){
     for(int i = 0 ; i<n ;i++) cin>>v[i];
         int k ;
     cin>>k;
+
     k--;
     if(k>n-1 || k<0){
         cout<<-1<<endl;
